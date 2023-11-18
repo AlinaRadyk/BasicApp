@@ -181,7 +181,7 @@ export const USERS = [
   {
     id: 5,
     firstName: 'Alina',
-    lastName: 'Semenukha',
+    lastName: 'Sem',
     email: 'semenukha@yahoo.com',
     phoneNumber: '+17872347856',
     image: null,
@@ -189,8 +189,8 @@ export const USERS = [
   },
   {
     id: 6,
-    firstName: 'Alina',
-    lastName: 'Semenukha',
+    firstName: 'Merry',
+    lastName: 'Ter',
     email: 'semenukha@yahoo.com',
     phoneNumber: '+17872347856',
     image: null,
@@ -198,8 +198,8 @@ export const USERS = [
   },
   {
     id: 7,
-    firstName: 'Alina',
-    lastName: 'Semenukha',
+    firstName: 'Yurii',
+    lastName: 'Shwets',
     email: 'semenukha@yahoo.com',
     phoneNumber: '+17872347856',
     image: null,
@@ -207,8 +207,8 @@ export const USERS = [
   },
   {
     id: 8,
-    firstName: 'Alina',
-    lastName: 'Semenukha',
+    firstName: 'Anna',
+    lastName: 'Luts',
     email: 'semenukha@yahoo.com',
     phoneNumber: '+17872347856',
     image: null,
@@ -216,8 +216,8 @@ export const USERS = [
   },
   {
     id: 9,
-    firstName: 'Alina',
-    lastName: 'Semenukha',
+    firstName: 'Magda',
+    lastName: 'Berg',
     email: 'semenukha@yahoo.com',
     phoneNumber: '+17872347856',
     image: null,

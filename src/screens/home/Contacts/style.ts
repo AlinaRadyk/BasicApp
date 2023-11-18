@@ -35,7 +35,6 @@ export default StyleSheet.create({
   userName: {
     fontSize: 16,
     fontWeight: '600',
-    color: COLORS.black,
   },
   email: {
     marginVertical: 5,
@@ -56,5 +55,15 @@ export default StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: PADDING_VERTICAL,
     backgroundColor: COLORS.border,
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyText: {
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
   },
 });

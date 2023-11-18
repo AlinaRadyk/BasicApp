@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from 'screens/home/Home';
+import Contacts from 'screens/home/Contacts';
 import Profile from 'screens/home/Profile';
 import TabBarLabel from 'components/common/TabBarLabel';
 
@@ -34,7 +34,7 @@ export const BottomTabBar: FC = () => {
     <Tab.Navigator>
       <Tab.Screen
         name={NAV_ROUTES.HOME}
-        component={Home}
+        component={Contacts}
         options={{
           headerTitle: t('contacts'),
           tabBarIcon: handleRenderHomeIcon,

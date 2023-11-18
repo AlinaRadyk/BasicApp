@@ -20,7 +20,7 @@ jest.mock('react-i18next', () => ({
   ...jest.requireActual('react-i18next'),
   useTranslation: () => {
     return {
-      t: (str: string) => str,
+      t: (str) => str,
       i18next: {
         changeLanguage: () => new Promise(() => {}),
       },

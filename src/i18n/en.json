@@ -13,5 +13,6 @@
   "english": "English",
   "spanish": "Spanish",
   "logout": "Log out",
-  "contacts": "Contacts"
+  "contacts": "Contacts",
+  "no_contacts": "You have no contacts."
 }

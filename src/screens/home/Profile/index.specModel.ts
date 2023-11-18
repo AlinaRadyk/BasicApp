@@ -1,7 +1,7 @@
 import { fireEvent, RenderResult, act } from '@testing-library/react-native';
 
 import { PROFILE_ACTION_BUTTONS_TYPES } from 'constants/index';
-import { PROFILE_TEST_IDS } from 'screens/home/Profile/index';
+import { PROFILE_TEST_IDS } from 'constants/testIds/index';
 
 export default class ProfileComponent {
   component: RenderResult;

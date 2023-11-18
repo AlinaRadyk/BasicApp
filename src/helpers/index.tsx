@@ -23,7 +23,7 @@ export const getEncryptionKey = async () => {
   return { isFresh: false, key: null };
 };
 
-export const getInitials = (userName) => {
+export const getInitials = (userName: string) => {
   const words = userName.split(' ');
   const initials = words.map(word => word.charAt(0));
   return initials.join('');

@@ -52,8 +52,7 @@
     "scripts",
     "**/*.js",
     "babel.config.js",
-    "metro.config.js",
-    "mock/mock.ts"
+    "metro.config.js"
   ],
   "include": [
     "src"
