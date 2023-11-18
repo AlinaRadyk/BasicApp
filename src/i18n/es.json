@@ -1,0 +1,17 @@
+{
+  "login": "Iniciar sesión",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "overview": "Descripción general",
+  "remember_me": "Acuérdate de mí",
+  "profile": "Perfil",
+  "settings": "Ajustes",
+  "privacy_policy": "Política de privacidad",
+  "terms": "Términos y condiciones",
+  "language": "Idioma",
+  "dark_mode": "Modo oscuro",
+  "light_mode": "Modo de luz",
+  "english": "Inglés",
+  "spanish": "Español",
+  "logout": "Cerrar sesión"
+}

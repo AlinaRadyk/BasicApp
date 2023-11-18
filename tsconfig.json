@@ -1,3 +1,60 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "importHelpers": true,
+    "jsx": "react-native",
+    "lib": [
+      "es6",
+      "DOM"
+    ],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "noEmitHelpers": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "outDir": "build/dist",
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strict": true,
+    "target": "esnext",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext"
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "exclude": [
+    "android",
+    "ios",
+    "node_modules",
+    "build",
+    "scripts",
+    "**/*.js",
+    "babel.config.js",
+    "metro.config.js"
+  ],
+  "include": [
+    "src"
+  ]
 }

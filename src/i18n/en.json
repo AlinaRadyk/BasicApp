@@ -1,0 +1,17 @@
+{
+  "login": "Sign In",
+  "email": "Email",
+  "password": "Password",
+  "overview": "Overview",
+  "remember_me": "Remember me",
+  "profile": "Profile",
+  "settings": "Settings",
+  "privacy_policy": "Privacy Policy",
+  "terms": "Terms and Conditions",
+  "language": "Language",
+  "dark_mode": "Dark mode",
+  "light_mode": "Light mode",
+  "english": "English",
+  "spanish": "Spanish",
+  "logout": "Log out"
+}
