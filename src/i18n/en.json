@@ -2,7 +2,6 @@
   "login": "Sign In",
   "email": "Email",
   "password": "Password",
-  "overview": "Overview",
   "remember_me": "Remember me",
   "profile": "Profile",
   "settings": "Settings",
@@ -13,5 +12,6 @@
   "light_mode": "Light mode",
   "english": "English",
   "spanish": "Spanish",
-  "logout": "Log out"
+  "logout": "Log out",
+  "contacts": "Contacts"
 }

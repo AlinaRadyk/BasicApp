@@ -1,6 +1,6 @@
 import * as Keychain from 'react-native-keychain';
 
-import { isEmail, getEncryptionKey } from 'helpers/index';
+import { isEmail, getInitials, getEncryptionKey } from 'helpers/index';
 import { validationSchemaLogin } from 'helpers/validationsSchemas';
 
 describe('Helpers tests', () => {
@@ -118,5 +118,35 @@ describe('Helpers tests', () => {
         'password is a required field',
       ]);
     }
+  });
+
+  it('should return initials for a single-word name', () => {
+    const result = getInitials('John');
+    expect(result).toBe('J');
+  });
+
+  it('should return initials for a two-word name', () => {
+    const result = getInitials('John Doe');
+    expect(result).toBe('JD');
+  });
+
+  it('should return initials for a three-word name', () => {
+    const result = getInitials('John Michael Doe');
+    expect(result).toBe('JMD');
+  });
+
+  it('should return empty string for an empty name', () => {
+    const result = getInitials('');
+    expect(result).toBe('');
+  });
+
+  it('should return empty string for a name with only spaces', () => {
+    const result = getInitials('    ');
+    expect(result).toBe('');
+  });
+
+  it('should handle leading and trailing spaces', () => {
+    const result = getInitials('   John   Doe   ');
+    expect(result).toBe('JD');
   });
 });

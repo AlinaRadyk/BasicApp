@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 
 import { getEncryptionKey } from 'helpers/index';
 
+type EncryptionKey = {
+  isFresh: boolean;
+  key: string | number[] | null;
+}
+
 const EncryptionGate = ({ children }) => {
-  const [encryptionKey, setEncryptionKey] = useState({
+  const [encryptionKey, setEncryptionKey] = useState<EncryptionKey>({
     isFresh: false,
     key: null,
   });

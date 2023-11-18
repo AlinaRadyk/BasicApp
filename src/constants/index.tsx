@@ -4,6 +4,7 @@ import i18next from 'i18next';
 export const USER = 'User';
 export const IS_IOS = Platform.OS === 'ios';
 export const PADDING_HORIZONTAL = 16;
+export const PADDING_VERTICAL = 10;
 export const FONT_SIZE16 = 16;
 export const FONT_SIZE12 = 12;
 export const REGULAR_LINE_HEIGHT = 22;
@@ -33,6 +34,7 @@ export const COLORS = {
   transparent: 'transparent',
   chatDarkBackground: '#121212',
   tabBarInactiveBackgroundColor: '#848689',
+  grayBackground: '#EFEFEF',
 };
 
 export const HEADER_OPTIONS = {
@@ -129,3 +131,96 @@ export const IS_IPHONE_X = (() => {
     || (DEVICE_HEIGHT >= XSMAX_WIDTH && DEVICE_WIDTH >= XSMAX_HEIGHT)
   );
 })();
+
+export const USERS = [
+  {
+    id: 0,
+    firstName: 'Alina',
+    lastName: 'Radyk',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+15672347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 1,
+    firstName: 'John',
+    lastName: 'Smith',
+    email: 'john.smith@gmail.com',
+    phoneNumber: '+17672347856',
+    image: null,
+    occupation: 'Clinician',
+  },
+  {
+    id: 2,
+    firstName: 'Jane',
+    lastName: 'Oliver',
+    email: 'jane.oliver@gmail.com',
+    phoneNumber: '+15671247856',
+    image: null,
+    occupation: 'Family doctor',
+  },
+  {
+    id: 3,
+    firstName: 'Luka',
+    lastName: 'Radyk',
+    email: 'luka.radyk@yahoo.com',
+    phoneNumber: '+15672346656',
+    image: null,
+    occupation: 'Pediatrician',
+  },
+  {
+    id: 4,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 5,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 6,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 7,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 8,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+  {
+    id: 9,
+    firstName: 'Alina',
+    lastName: 'Semenukha',
+    email: 'semenukha@yahoo.com',
+    phoneNumber: '+17872347856',
+    image: null,
+    occupation: 'Physician',
+  },
+];

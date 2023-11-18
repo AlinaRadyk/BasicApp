@@ -18,17 +18,27 @@ export const BottomTabBar: FC = () => {
   const iconFocusedColor = COLORS.brand;
   const iconUnFocusedColor = COLORS.tabBarInactiveBackgroundColor;
 
+  const handleRenderHomeIcon = ({ focused }) => (
+    <Overview color={focused ? iconFocusedColor : iconUnFocusedColor} />
+  );
+
+  const handleRenderProfileIcon = ({ focused }) => (
+    <Settings color={focused ? iconFocusedColor : iconUnFocusedColor} />
+  );
+
+  const handleRenderLabel = (focused: boolean, label: string) => (
+    <TabBarLabel tabBarLabel={label} focused={focused} focusedColor={iconFocusedColor} />
+  );
+
   return (
     <Tab.Navigator>
       <Tab.Screen
         name={NAV_ROUTES.HOME}
         component={Home}
         options={{
-          headerShown: false,
-          tabBarIcon: ({ focused }) => <Overview color={focused ? iconFocusedColor : iconUnFocusedColor} />,
-          tabBarLabel: ({ focused }) => (
-            <TabBarLabel tabBarLabel={t('overview')} focused={focused} focusedColor={iconFocusedColor} />
-          ),
+          headerTitle: t('contacts'),
+          tabBarIcon: handleRenderHomeIcon,
+          tabBarLabel: ({ focused }) => handleRenderLabel(focused, t('contacts')),
         }}
       />
       <Tab.Screen
@@ -36,10 +46,8 @@ export const BottomTabBar: FC = () => {
         component={Profile}
         options={{
           headerShown: false,
-          tabBarIcon: ({ focused }) => <Settings color={focused ? iconFocusedColor : iconUnFocusedColor} />,
-          tabBarLabel: ({ focused }) => (
-            <TabBarLabel tabBarLabel={t('settings')} focused={focused} focusedColor={iconFocusedColor} />
-          ),
+          tabBarIcon: handleRenderProfileIcon,
+          tabBarLabel: ({ focused }) => handleRenderLabel(focused, t('settings')),
         }}
       />
     </Tab.Navigator>

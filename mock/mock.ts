@@ -1,7 +1,5 @@
 import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 import mockSafeAreaContext from 'react-native-safe-area-context/jest/mock';
-// @ts-ignore
-import mockCamera from 'mock/mockCamera';
 
 jest.mock('react-native-keychain', () => ({
   getGenericPassword: jest.fn(),

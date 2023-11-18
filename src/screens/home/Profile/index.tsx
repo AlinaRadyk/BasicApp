@@ -12,17 +12,13 @@ import NAV_ROUTES from 'constants/routes';
 import {
   COLORS, MODES, PROFILE_ACTION_BUTTONS, PROFILE_ACTION_BUTTONS_TYPES,
 } from 'constants/index';
+import { PROFILE_TEST_IDS } from 'constants/testIds';
 
 import { logoutUser } from 'modules/auth/actions';
 import { getUser } from 'modules/auth/selectors';
 import { getMode } from 'modules/app/selectors';
 
 import styles from 'screens/home/Profile/style';
-
-export const PROFILE_TEST_IDS = {
-  PROFILE_ITEMS_LIST: 'PROFILE_ITEMS_LIST',
-  PROFILE_USERNAME: 'PROFILE_USERNAME',
-};
 
 const Profile: FC = () => {
   const insets = useSafeAreaInsets();

@@ -3,7 +3,7 @@ import uuid from 'react-native-uuid';
 
 import { ENCRYPTION_KEY } from 'constants/index';
 
-export const isEmail = (email) => {
+export const isEmail = (email: string) => {
   const regex = /\S+@\S+\.\S+/;
   return regex.test(email);
 };
@@ -21,4 +21,10 @@ export const getEncryptionKey = async () => {
     return { isFresh: true, key: randomBytes };
   }
   return { isFresh: false, key: null };
+};
+
+export const getInitials = (userName) => {
+  const words = userName.split(' ');
+  const initials = words.map(word => word.charAt(0));
+  return initials.join('');
 };

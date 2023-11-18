@@ -10,3 +10,5 @@ export const setLoading = createAction(APP_ACTIONS_CONSTANTS.SET_LOADING);
 export const appInit = createAction(APP_ACTIONS_CONSTANTS.APP_INIT);
 export const setAlertVisible = createAction(APP_ACTIONS_CONSTANTS.SET_ALERT_VISIBLE);
 export const clearState = createAction(APP_ACTIONS_CONSTANTS.CLEAR_STATE);
+export const getContacts = createAction(APP_ACTIONS_CONSTANTS.GET_CONTACTS);
+export const setContacts = createAction(APP_ACTIONS_CONSTANTS.SET_CONTACTS);

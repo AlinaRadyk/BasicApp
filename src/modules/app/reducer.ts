@@ -7,6 +7,7 @@ import {
   setLoading,
   setLanguage,
   clearState,
+  setContacts,
   setAlertVisible,
 } from 'modules/app/actions';
 
@@ -19,6 +20,7 @@ const initialState = {
   alertVisible: false,
   mode: MODES.LIGHT,
   language: SUPPORTED_LANGUAGES.EN,
+  contacts: [],
 };
 
 export default handleActions(
@@ -52,6 +54,10 @@ export default handleActions(
     [setAlertVisible]: state => ({
       ...state,
       alertVisible: !state.alertVisible,
+    }),
+    [setContacts]: (state, { payload }) => ({
+      ...state,
+      contacts: payload,
     }),
   },
   initialState,
