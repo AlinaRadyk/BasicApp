@@ -14,7 +14,6 @@ module.exports = {
           helpers: './src/helpers',
           screens: './src/screens',
           i18n: './src/i18n',
-          services: './src/services',
           navigation: './src/navigation',
           components: './src/components',
         },
