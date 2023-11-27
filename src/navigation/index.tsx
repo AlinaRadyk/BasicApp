@@ -15,7 +15,7 @@ import BackButton from 'components/common/BackButton';
 import LoadingScreen from 'screens/loading';
 
 // AUTH
-import Login from 'screens/auth/Login';
+// import Login from 'screens/auth/Login';
 import PrivacyPolicy from 'screens/auth/PrivacyPolicy';
 import TermsAndConditions from 'screens/auth/TermsAndConditions';
 
@@ -33,7 +33,7 @@ import { setAlertVisible, clearError, setMode } from 'modules/app/actions';
 import {
  getLoading, getError, getErrorText, getAlertVisible, getMode, getLanguage,
 } from 'modules/app/selectors';
-import { getUser } from 'modules/auth/selectors';
+// import { getUser } from 'modules/auth/selectors';
 
 function Navigator() {
   const { t } = useTranslation();
@@ -43,7 +43,7 @@ function Navigator() {
   const mode = useSelector(state => getMode(state));
   const language = useSelector(state => getLanguage(state));
   const error = useSelector(state => getError(state));
-  const user = useSelector(state => getUser(state));
+  // const user = useSelector(state => getUser(state));
   const errorText = useSelector(state => getErrorText(state));
   const visible = useSelector(state => getAlertVisible(state));
   const loading = useSelector(state => getLoading(state));
@@ -75,13 +75,13 @@ function Navigator() {
 
   const Stack = createStackNavigator();
 
-  const authGroup = () => (
-    <Stack.Group>
-      <Stack.Screen name={NAV_ROUTES.LOGIN} component={Login} options={HEADER_OPTIONS} />
-      <Stack.Screen name={NAV_ROUTES.PRIVACY_POLICY} component={PrivacyPolicy} options={HEADER_OPTIONS} />
-      <Stack.Screen name={NAV_ROUTES.TERMS_AND_CONDITIONS} component={TermsAndConditions} options={HEADER_OPTIONS} />
-    </Stack.Group>
-  );
+  // const authGroup = () => (
+  //   <Stack.Group>
+  //     <Stack.Screen name={NAV_ROUTES.LOGIN} component={Login} options={HEADER_OPTIONS} />
+  //     <Stack.Screen name={NAV_ROUTES.PRIVACY_POLICY} component={PrivacyPolicy} options={HEADER_OPTIONS} />
+  //     <Stack.Screen name={NAV_ROUTES.TERMS_AND_CONDITIONS} component={TermsAndConditions} options={HEADER_OPTIONS} />
+  //   </Stack.Group>
+  // );
 
   const mainGroup = () => (
     <Stack.Group>
@@ -135,7 +135,7 @@ function Navigator() {
       <NavigationContainer theme={isDarkMode ? DarkTheme : DefaultTheme}>
         <Stack.Navigator>
           <Stack.Screen name={NAV_ROUTES.INITIAL_SCREEN} component={LoadingScreen} options={HEADER_OPTIONS} />
-          {user ? mainGroup() : authGroup()}
+          {mainGroup()}
         </Stack.Navigator>
       </NavigationContainer>
       {visible && (

@@ -24,19 +24,23 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    height: 72,
-    width: 72,
-    borderRadius: 36,
+    height: 100,
+    width: 120,
+    borderRadius: 10,
     marginRight: 10,
   },
   userInfo: {
-    maxWidth: '75%',
+    maxWidth: '55%',
   },
-  userName: {
+  description: {
     fontSize: 16,
     fontWeight: '600',
   },
-  email: {
+  location: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  coordinates: {
     marginVertical: 5,
     fontSize: 12,
     fontWeight: '400',

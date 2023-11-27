@@ -105,6 +105,7 @@ describe('Login form', () => {
     expect(mockOnSubmit).toHaveBeenCalledTimes(1);
     expect(mockOnSubmit).toHaveBeenCalledWith({ email, password, remember: true }, expect.anything());
 
+    store.dispatch(setUser(null));
     store.dispatch(setError(ERROR));
     store.dispatch(setAlertVisible(true));
     const state = store.getState();

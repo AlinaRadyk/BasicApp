@@ -1,7 +1,20 @@
 import * as Keychain from 'react-native-keychain';
 
-import { isEmail, getInitials, getEncryptionKey } from 'helpers/index';
+import {
+  isEmail,
+  getInitials,
+  getEncryptionKey,
+  orderByQuadrant,
+} from 'helpers/index';
 import { validationSchemaLogin } from 'helpers/validationsSchemas';
+
+const data = [
+  { quadrant: 'SW', camera_location: 'Zebra Street' },
+  { quadrant: 'NE', camera_location: 'Apple Street' },
+  { quadrant: 'NW', camera_location: 'Banana Street' },
+  { quadrant: 'SE', camera_location: 'Orange Street' },
+  { quadrant: 'NE', camera_location: 'Cherry Street' },
+];
 
 describe('Helpers tests', () => {
   it('should return an existing key if it exists in Keychain', async () => {
@@ -148,5 +161,18 @@ describe('Helpers tests', () => {
   it('should handle leading and trailing spaces', () => {
     const result = getInitials('   John   Doe   ');
     expect(result).toBe('JD');
+  });
+
+  it('should order data by quadrant and camera_location in ascending order', () => {
+    const result = orderByQuadrant(data);
+    const expectedOrder = [
+      { quadrant: 'NW', camera_location: 'Banana Street' },
+      { quadrant: 'NE', camera_location: 'Apple Street' },
+      { quadrant: 'NE', camera_location: 'Cherry Street' },
+      { quadrant: 'SW', camera_location: 'Zebra Street' },
+      { quadrant: 'SE', camera_location: 'Orange Street' },
+    ];
+
+    expect(result).toEqual(expectedOrder);
   });
 });
