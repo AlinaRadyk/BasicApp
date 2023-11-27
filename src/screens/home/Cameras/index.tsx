@@ -2,11 +2,12 @@ import React, { FC, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Text } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';
-import { View, FlatList } from 'react-native';
+import { View, FlatList, RefreshControl } from 'react-native';
 import FastImage from 'react-native-fast-image';
 
 import Card from 'components/common/Card';
 
+import { COLORS } from 'constants/index';
 import { CAMERAS_TESTS_IDS } from 'constants/testIds';
 
 import useForegroundHandler from 'hooks/useForegroundHandler';
@@ -31,6 +32,10 @@ const Cameras: FC = () => {
   useEffect(() => {
     handleGetContacts();
   }, []);
+
+  const handleRefetch = () => {
+    handleGetContacts();
+  };
 
   const handleRenderEmpty = () => (
     <View style={styles.emptyContainer}>
@@ -81,6 +86,13 @@ const Cameras: FC = () => {
         showsVerticalScrollIndicator={false}
         testID={CAMERAS_TESTS_IDS.CAMERAS_LIST}
         ListEmptyComponent={handleRenderEmpty}
+        refreshControl={(
+          <RefreshControl
+            tintColor={COLORS.brand}
+            refreshing={false}
+            onRefresh={handleRefetch}
+          />
+        )}
       />
     </View>
   );
