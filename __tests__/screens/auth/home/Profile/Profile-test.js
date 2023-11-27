@@ -42,13 +42,4 @@ describe('Profile tests', () => {
     const screensUsername = await component.getProfileUsername();
     expect(screensUsername).toBe(email);
   });
-
-  it('It logs user out', async () => {
-    const component = new ProfileComponent(render(
-      <Profile />,
-    ));
-
-    await component.logoutPress();
-    expect(store.getState().auth.user).toBe(null);
-  });
 });

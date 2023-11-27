@@ -1,5 +1,6 @@
 import Keychain from 'react-native-keychain';
 import uuid from 'react-native-uuid';
+import _ from 'lodash';
 
 import { ENCRYPTION_KEY } from 'constants/index';
 
@@ -27,4 +28,17 @@ export const getInitials = (userName: string) => {
   const words = userName.split(' ');
   const initials = words.map(word => word.charAt(0));
   return initials.join('');
+};
+
+export const orderByQuadrant = (data) => {
+  const quadrantOrder = {
+    NW: 0, NE: 1, SW: 2, SE: 3,
+  };
+
+  const sortedData = _.sortBy(data, [
+    (item) => quadrantOrder[item.quadrant.toUpperCase()],
+    'camera_location',
+  ]);
+
+  return sortedData;
 };

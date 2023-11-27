@@ -3,8 +3,12 @@ import { handleActions } from 'redux-actions';
 import { setUser, logoutUser } from 'modules/auth/actions';
 import { clearState } from 'modules/app/actions';
 
+const email = 'test@gmail.com';
+
 const initialState = {
-  user: null,
+  user: {
+    email, username: email,
+  },
 };
 
 export default handleActions(

@@ -1,17 +1,20 @@
 import { put, select, takeEvery } from 'redux-saga/effects';
 
-import { ERROR, USERS } from 'constants/index';
+import { ERROR } from 'constants/index';
+import { orderByQuadrant } from 'helpers/index';
 
 import {
   appInit,
   setError,
   setLoading,
-  getContacts,
-  setContacts,
+  getCameras,
+  setCameras,
   setAlertVisible,
 } from 'modules/app/actions';
 import { setUser } from 'modules/auth/actions';
 import { getUser } from 'modules/auth/selectors';
+
+import Api from 'services/api';
 
 function* getUserFromAsyncStorage() {
   try {
@@ -30,7 +33,8 @@ function* getUserFromAsyncStorage() {
 function* getContactsWorker() {
   try {
     yield put(setLoading(true));
-    yield put(setContacts(USERS));
+    const data = yield Api.getCamerasLocations();
+    yield put(setCameras(orderByQuadrant(data)));
   } catch (e) {
     yield put(setError(ERROR));
     yield put(setAlertVisible());
@@ -41,5 +45,5 @@ function* getContactsWorker() {
 
 export default function* () {
   yield takeEvery(appInit, getUserFromAsyncStorage);
-  yield takeEvery(getContacts, getContactsWorker);
+  yield takeEvery(getCameras, getContactsWorker);
 }

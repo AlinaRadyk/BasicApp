@@ -4,4 +4,4 @@ export const getErrorText = (state) => state.app.errorText;
 export const getLoading = (state) => state.app.loading;
 export const getLanguage = (state) => state.app.language;
 export const getAlertVisible = (state) => state.app.alertVisible;
-export const getContactsList = (state) => state.app.contacts;
+export const getCamerasList = (state) => state.app.cameras;

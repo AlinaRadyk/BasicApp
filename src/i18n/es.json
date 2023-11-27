@@ -13,6 +13,9 @@
   "english": "Inglés",
   "spanish": "Español",
   "logout": "Cerrar sesión",
-  "contacts": "Contactos",
-  "no_contacts": "No tienes contactos."
+  "contacts": "Cámaras",
+  "no_contacts": "No tienes cámaras.",
+  "coordinates": "Coordenadas",
+  "long": "long",
+  "lat": "lat"
 }

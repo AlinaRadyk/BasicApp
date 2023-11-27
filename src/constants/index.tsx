@@ -70,11 +70,11 @@ export const PROFILE_ACTION_BUTTONS = [
     key: 'privacy_policy',
     type: PROFILE_ACTION_BUTTONS_TYPES.PRIVACY_POLICY,
   },
-  {
-    id: 4,
-    key: 'logout',
-    type: PROFILE_ACTION_BUTTONS_TYPES.LOGOUT,
-  },
+  // {
+  //   id: 4,
+  //   key: 'logout',
+  //   type: PROFILE_ACTION_BUTTONS_TYPES.LOGOUT,
+  // },
 ];
 
 export const LANGUAGES = [
@@ -132,95 +132,41 @@ export const IS_IPHONE_X = (() => {
   );
 })();
 
-export const USERS = [
+export const CAMERAS = [
   {
     id: 0,
-    firstName: 'Alina',
-    lastName: 'Radyk',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+15672347856',
-    image: null,
-    occupation: 'Physician',
+    camera_url: {
+      url: 'http://trafficcam.calgary.ca/loc29.jpg',
+      description: 'Camera 30',
+    },
+    quadrant: 'SE',
+    camera_location: '114 Avenue / 52 Street SE',
+    point: {
+      coordinates: [-113.958331, 50.9504395],
+    },
   },
   {
     id: 1,
-    firstName: 'John',
-    lastName: 'Smith',
-    email: 'john.smith@gmail.com',
-    phoneNumber: '+17672347856',
-    image: null,
-    occupation: 'Clinician',
+    camera_url: {
+      url: 'http://trafficcam.calgary.ca/loc141.jpg',
+      description: 'Camera 142',
+    },
+    quadrant: 'SW',
+    camera_location: '90 Avenue / 24 Street SW',
+    point: {
+      coordinates: [-114.1177502, 50.9724213],
+    },
   },
   {
     id: 2,
-    firstName: 'Jane',
-    lastName: 'Oliver',
-    email: 'jane.oliver@gmail.com',
-    phoneNumber: '+15671247856',
-    image: null,
-    occupation: 'Family doctor',
-  },
-  {
-    id: 3,
-    firstName: 'Luka',
-    lastName: 'Radyk',
-    email: 'luka.radyk@yahoo.com',
-    phoneNumber: '+15672346656',
-    image: null,
-    occupation: 'Pediatrician',
-  },
-  {
-    id: 4,
-    firstName: 'Alina',
-    lastName: 'Semenukha',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
-  },
-  {
-    id: 5,
-    firstName: 'Alina',
-    lastName: 'Sem',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
-  },
-  {
-    id: 6,
-    firstName: 'Merry',
-    lastName: 'Ter',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
-  },
-  {
-    id: 7,
-    firstName: 'Yurii',
-    lastName: 'Shwets',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
-  },
-  {
-    id: 8,
-    firstName: 'Anna',
-    lastName: 'Luts',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
-  },
-  {
-    id: 9,
-    firstName: 'Magda',
-    lastName: 'Berg',
-    email: 'semenukha@yahoo.com',
-    phoneNumber: '+17872347856',
-    image: null,
-    occupation: 'Physician',
+    camera_url: {
+      url: 'http://trafficcam.calgary.ca/loc89.jpg',
+      description: 'Camera 9',
+    },
+    quadrant: 'NW/NE',
+    camera_location: 'Samis Road / Centre Street North',
+    point: {
+      coordinates: [-114.0624739, 51.0549834],
+    },
   },
 ];
